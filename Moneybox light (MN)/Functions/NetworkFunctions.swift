@@ -55,7 +55,6 @@ func getInvestorProductsObject(token: String, loginCompletionHander: @escaping (
     task.resume()
 }
 
-
 func postOneOffPayment(token : String, parameters: Dictionary<String, String>, loginCompletionHander: @escaping (oneOffPaymentObject?,URLResponse?, Error?) -> Void){
             
     var request = URLRequest(url: URL(string: "https://api-test01.moneyboxapp.com//oneoffpayments")!)
