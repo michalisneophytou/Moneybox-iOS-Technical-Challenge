@@ -85,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0203177F2382DD53000E9A6C /* UI Classes */ = {
+			isa = PBXGroup;
+			children = (
+				02B52990237DBEEB0058974B /* AccountCell.swift */,
+			);
+			path = "UI Classes";
+			sourceTree = "<group>";
+		};
 		028CCC5123801983007E7FBA /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +172,7 @@
 			children = (
 				02FDBBE223758C54007B6D11 /* AppDelegate.swift */,
 				0203177D2382BE38000E9A6C /* SceneDelegate.swift */,
-				02B52990237DBEEB0058974B /* AccountCell.swift */,
+				0203177F2382DD53000E9A6C /* UI Classes */,
 				02CADA83237B3806002D7C35 /* Functions */,
 				028CCC5123801983007E7FBA /* Protocols */,
 				02CADA7A237B17B5002D7C35 /* ViewControllers */,
