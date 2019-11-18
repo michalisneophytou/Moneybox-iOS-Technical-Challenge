@@ -8,8 +8,8 @@ This 'light' version of the Moneybox and it allowes existing users to login and 
 - An overview screen that shows all of the user's accounts, along with a pie chart
 - A detail screen that allows the user to add money to their moneybox using the `POST /oneoffpayments` endpoint
 
-Here is a preview of all three screens 
-
+Here is a preview of all three screens:
+![](screenshots.png)
 
 ### Enablers
 To build this app the following methods were employed:
