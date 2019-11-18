@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+// main object returned from the LogIn POST. Struct is used to decode the JSON return into an object
 struct logInObject : Decodable {
     let User: User
     let InformationMessage : String

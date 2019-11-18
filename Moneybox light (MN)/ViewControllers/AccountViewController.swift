@@ -11,38 +11,19 @@ import Charts
 
 class AccountViewController: UIViewController {
     
-    func refreshToken(){
-        postLogInObject(parameters: self.credentials!, loginCompletionHander: {
-            returnedLogInObject, response, error in
-            if let logInObject = returnedLogInObject{
-                self.loginObject = logInObject
-                getInvestorProductsObject(token: logInObject.Session.BearerToken) { (ipObject, ipResponse, ipError) in
-                    if let ipObject = ipObject{
-                        self.investorAccountObject = ipObject
-                        self.tableView.reloadData()
-                        self.customizeChart()
-                    }
-                }
-            }
-        })
-        DispatchQueue.main.asyncAfter(deadline: .now() + 270.0, execute: {
-            self.refreshToken()
-        })
-    }
-    
+    //MARK: Class variables
     var loginObject : logInObject?
     var investorAccountObject : investorProductsObject?
     var credentials : Dictionary<String, String>?
     var pieChartHighlighted : Double?
     
+    //MARK: UI Outlets and Actions
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var helloUserLabel: UILabel!
     @IBOutlet weak var pieChartView: PieChartView!
     @IBAction func signOutButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-   
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +36,7 @@ class AccountViewController: UIViewController {
         tableView.reloadData()
         customizeChart()
         
+        // to refresh the bearer token every 4.5 minutes
         DispatchQueue.main.asyncAfter(deadline: .now() + 270, execute: {
             self.refreshToken()
         })
@@ -63,11 +45,40 @@ class AccountViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationNavigationController = segue.destination as! UINavigationController
         let accountDetailController = destinationNavigationController.topViewController as! AccountDetailController
-        accountDetailController.productResponseObject = investorAccountObject!.ProductResponses[sender as! Int]
+        accountDetailController.productResponseObject = investorAccountObject!.ProductResponses[sender as! Int] //passing a single product response to each accountDetailController created
         accountDetailController.delegate = self
+    }
+    
+    ///uses the credentials passed just before the segue and gets a new token and refreshes the viewer and its data
+    func refreshToken(){
+        postLogInObject(parameters: self.credentials!, loginCompletionHander: {
+            returnedLogInObject, response, error in
+            if let httpURLresponse = response as? HTTPURLResponse{
+              switch httpURLresponse.statusCode {
+              case 200:
+                self.loginObject = returnedLogInObject
+                getInvestorProductsObject(token: returnedLogInObject!.Session.BearerToken) { (ipObject, ipResponse, ipError) in
+                      if let ipObject = ipObject{
+                          self.investorAccountObject = ipObject
+                          self.tableView.reloadData()
+                          self.customizeChart()
+                      }
+                  }
+              default:
+                  let unexpectedAlert = UIAlertController(title: "Unexpected Refresh Error", message: "Please try again later", preferredStyle: UIAlertController.Style.alert)
+                  unexpectedAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                  self.present(unexpectedAlert, animated: true, completion: nil)
+                  self.dismiss(animated: true, completion: nil)
+              }
+            }
+        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + 270.0, execute: {
+            self.refreshToken()
+        })
     }
 }
 
+//MARK: TableView functions
 extension AccountViewController : UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -75,14 +86,15 @@ extension AccountViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 1    //mutiple sections used instead of mutilple cells in each seaction, to add separation between the cells
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
+        return 10     //table headers were used to add gap between the cells
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        // essential to add (clear) gap between the cells
         let headerView = UIView()
         headerView.backgroundColor = UIColor.clear
         return headerView
@@ -94,6 +106,8 @@ extension AccountViewController : UITableViewDelegate, UITableViewDataSource{
         cell.accountTextLabel.text = singleAccount?.Product.FriendlyName
         cell.planValueLabel.text = "Plan Value: £" + String(format:"%.2f", singleAccount?.PlanValue ?? 0.0)
         cell.moneyboxLabel.text = "Moneybox: £" + String(singleAccount?.Moneybox ?? 0)
+        
+        // so that the right cell is empasised when a pie chart segment is tapped/
         if singleAccount?.PlanValue == pieChartHighlighted ?? 0.00000000001{
             cell.contentView.layer.borderWidth = 4
             cell.contentView.layer.borderColor = UIColor.black.cgColor
@@ -109,12 +123,14 @@ extension AccountViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // note that indexPath.section is used rather than indexPath.row
+        // note that indexPath.section and not indexPath.row as each section has a row and mutiple sections are used
         tableView.deselectRow(at: indexPath, animated: true)
-        self.performSegue(withIdentifier: "showDetailSegue", sender: indexPath.section)
+        self.performSegue(withIdentifier: "showDetailSegue", sender: indexPath.section)    //sender is the index and used to send the right one fo the ProductResponses to the detail view
     }
 }
 
+//MARK: Protocol detailToOverviewProtocol functions
+//Protocol functions to get the changes that the AccountDetailController does by POST at /oneoffpayments
 extension AccountViewController : detailToOverviewProtocol{
     func oneOffPaymentComplete(investorProductID: Int, newAmount: Int) {
         if let row = self.investorAccountObject?.ProductResponses.firstIndex(where: {$0.Id == investorProductID}) {
@@ -124,7 +140,6 @@ extension AccountViewController : detailToOverviewProtocol{
         }
         self.tableView.reloadData()
         customizeChart()
-
     }
     
     func getToken() -> String {
@@ -138,6 +153,7 @@ extension AccountViewController: ChartViewDelegate{
         tableView.reloadData()
     }
     
+    /// function to get the Pie Chart formatted and refresh its data
     func customizeChart() {
           var dataEntries: [ChartDataEntry] = []
           let accountTypes = self.investorAccountObject!.ProductResponses.map({ (productResponse: ProductResponse) -> String in

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+// This is used to decode the JSON return into an object from the POST for one-off payments
 
 struct oneOffPaymentObject: Decodable {
         let Moneybox: Int

@@ -8,6 +8,7 @@
 
 import UIKit
 
+// custom UITableViewCell for the table of investor products in the AccountViewController
 class AccountCell: UITableViewCell {
     @IBOutlet weak var arrowImage : UIImageView!
     @IBOutlet weak var accountTextLabel: UILabel!

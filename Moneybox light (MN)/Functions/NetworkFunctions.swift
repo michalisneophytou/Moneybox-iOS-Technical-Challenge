@@ -1,6 +1,6 @@
 import Foundation
 
-
+// function for the URL request, returns a logInObject if there is one, a URL response and error
 func postLogInObject(parameters: Dictionary<String, String>, loginCompletionHander: @escaping (logInObject?,URLResponse?, Error?) -> Void){
             
     var request = URLRequest(url: URL(string: "https://api-test01.moneyboxapp.com/users/login")!)
@@ -28,7 +28,7 @@ func postLogInObject(parameters: Dictionary<String, String>, loginCompletionHand
     task.resume()
 }
 
-
+// function for the URL request, returns a investorProductsObject if there is one, a URL response and error
 func getInvestorProductsObject(token: String, loginCompletionHander: @escaping (investorProductsObject?, URLResponse?, Error?) -> Void){
             
     var request = URLRequest(url: URL(string: "https://api-test01.moneyboxapp.com/investorproducts")!)
@@ -55,6 +55,7 @@ func getInvestorProductsObject(token: String, loginCompletionHander: @escaping (
     task.resume()
 }
 
+// function for the URL request, returns a oneOffPaymentObject (if successful), a URL response and error
 func postOneOffPayment(token : String, parameters: Dictionary<String, String>, loginCompletionHander: @escaping (oneOffPaymentObject?,URLResponse?, Error?) -> Void){
             
     var request = URLRequest(url: URL(string: "https://api-test01.moneyboxapp.com//oneoffpayments")!)

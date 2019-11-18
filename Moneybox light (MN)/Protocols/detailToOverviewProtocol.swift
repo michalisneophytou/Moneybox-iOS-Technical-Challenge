@@ -8,6 +8,7 @@
 
 import Foundation
 
+//protocol used for detail view AccountDetailController to pass data and trigger functions of its parent view AccountViewController
 protocol detailToOverviewProtocol {
     func oneOffPaymentComplete(investorProductID : Int, newAmount: Int)
     func getToken() -> String

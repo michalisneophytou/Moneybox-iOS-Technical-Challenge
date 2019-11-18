@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0203177E2382BE39000E9A6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0203177D2382BE38000E9A6C /* SceneDelegate.swift */; };
+		0203178123830E2C000E9A6C /* screenshots.png in Resources */ = {isa = PBXBuildFile; fileRef = 0203178023830E2C000E9A6C /* screenshots.png */; };
 		02097B71237842FD00C4C3D6 /* PostLoginStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02097B70237842FD00C4C3D6 /* PostLoginStructs.swift */; };
-		028CCC50238012AC007E7FBA /* OneOffPaymentStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028CCC4F238012AC007E7FBA /* OneOffPaymentStructs.swift */; };
+		028CCC50238012AC007E7FBA /* PostOneOffPaymentStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028CCC4F238012AC007E7FBA /* PostOneOffPaymentStructs.swift */; };
 		028CCC53238019A3007E7FBA /* detailToOverviewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028CCC52238019A3007E7FBA /* detailToOverviewProtocol.swift */; };
 		02B52991237DBEEB0058974B /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B52990237DBEEB0058974B /* AccountCell.swift */; };
-		02B52993237DC37A0058974B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B52992237DC37A0058974B /* UIColorExtension.swift */; };
-		02CADA77237B1759002D7C35 /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CADA76237B1759002D7C35 /* URLSessionExtension.swift */; };
+		02B52993237DC37A0058974B /* colorStringFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B52992237DC37A0058974B /* colorStringFunction.swift */; };
 		02CADA80237B28FC002D7C35 /* GetInvestorProductsStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CADA7F237B28FC002D7C35 /* GetInvestorProductsStructs.swift */; };
 		02CADA82237B37F2002D7C35 /* NetworkFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CADA81237B37F2002D7C35 /* NetworkFunctions.swift */; };
 		02FDBBE323758C54007B6D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDBBE223758C54007B6D11 /* AppDelegate.swift */; };
@@ -40,12 +40,12 @@
 
 /* Begin PBXFileReference section */
 		0203177D2382BE38000E9A6C /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0203178023830E2C000E9A6C /* screenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screenshots.png; path = ../../../screenshots.png; sourceTree = "<group>"; };
 		02097B70237842FD00C4C3D6 /* PostLoginStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoginStructs.swift; sourceTree = "<group>"; };
-		028CCC4F238012AC007E7FBA /* OneOffPaymentStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneOffPaymentStructs.swift; sourceTree = "<group>"; };
+		028CCC4F238012AC007E7FBA /* PostOneOffPaymentStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOneOffPaymentStructs.swift; sourceTree = "<group>"; };
 		028CCC52238019A3007E7FBA /* detailToOverviewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailToOverviewProtocol.swift; sourceTree = "<group>"; };
 		02B52990237DBEEB0058974B /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
-		02B52992237DC37A0058974B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		02CADA76237B1759002D7C35 /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
+		02B52992237DC37A0058974B /* colorStringFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorStringFunction.swift; sourceTree = "<group>"; };
 		02CADA7F237B28FC002D7C35 /* GetInvestorProductsStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInvestorProductsStructs.swift; sourceTree = "<group>"; };
 		02CADA81237B37F2002D7C35 /* NetworkFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFunctions.swift; sourceTree = "<group>"; };
 		02FDBBDF23758C54007B6D11 /* Moneybox light (MN).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moneybox light (MN).app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,19 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				02097B70237842FD00C4C3D6 /* PostLoginStructs.swift */,
-				028CCC4F238012AC007E7FBA /* OneOffPaymentStructs.swift */,
+				028CCC4F238012AC007E7FBA /* PostOneOffPaymentStructs.swift */,
 				02CADA7F237B28FC002D7C35 /* GetInvestorProductsStructs.swift */,
 			);
 			path = Structs;
-			sourceTree = "<group>";
-		};
-		02CADA79237B1796002D7C35 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				02CADA76237B1759002D7C35 /* URLSessionExtension.swift */,
-				02B52992237DC37A0058974B /* UIColorExtension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		02CADA7A237B17B5002D7C35 /* ViewControllers */ = {
@@ -125,6 +116,7 @@
 			children = (
 				02FDBC0723758E43007B6D11 /* LogInViewController.swift */,
 				02FDBC0923758E9A007B6D11 /* AccountViewController.swift */,
+				0203178023830E2C000E9A6C /* screenshots.png */,
 				02FDBC0B23758EAF007B6D11 /* AccountDetailController.swift */,
 			);
 			path = ViewControllers;
@@ -143,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				02CADA81237B37F2002D7C35 /* NetworkFunctions.swift */,
+				02B52992237DC37A0058974B /* colorStringFunction.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -176,7 +169,6 @@
 				02CADA83237B3806002D7C35 /* Functions */,
 				028CCC5123801983007E7FBA /* Protocols */,
 				02CADA7A237B17B5002D7C35 /* ViewControllers */,
-				02CADA79237B1796002D7C35 /* Extensions */,
 				02CADA78237B1780002D7C35 /* Structs */,
 				02CADA7D237B1B58002D7C35 /* Storyboards */,
 				02FDBBEE23758C56007B6D11 /* Assets.xcassets */,
@@ -303,6 +295,7 @@
 				02FDBBF223758C56007B6D11 /* LaunchScreen.storyboard in Resources */,
 				02FDBBEF23758C56007B6D11 /* Assets.xcassets in Resources */,
 				02FDBBEA23758C54007B6D11 /* Main.storyboard in Resources */,
+				0203178123830E2C000E9A6C /* screenshots.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,12 +363,11 @@
 				02CADA80237B28FC002D7C35 /* GetInvestorProductsStructs.swift in Sources */,
 				02FDBC0A23758E9A007B6D11 /* AccountViewController.swift in Sources */,
 				02FDBBE323758C54007B6D11 /* AppDelegate.swift in Sources */,
-				028CCC50238012AC007E7FBA /* OneOffPaymentStructs.swift in Sources */,
+				028CCC50238012AC007E7FBA /* PostOneOffPaymentStructs.swift in Sources */,
 				02FDBC0823758E43007B6D11 /* LogInViewController.swift in Sources */,
 				02CADA82237B37F2002D7C35 /* NetworkFunctions.swift in Sources */,
 				02B52991237DBEEB0058974B /* AccountCell.swift in Sources */,
-				02CADA77237B1759002D7C35 /* URLSessionExtension.swift in Sources */,
-				02B52993237DC37A0058974B /* UIColorExtension.swift in Sources */,
+				02B52993237DC37A0058974B /* colorStringFunction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

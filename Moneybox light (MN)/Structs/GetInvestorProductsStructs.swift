@@ -8,6 +8,7 @@
 
 import Foundation
 
+// main object returned from GET investorproducts. Struct is used to decode the JSON reponse into an object
 struct investorProductsObject: Decodable {
     let MoneyboxEndOfTaxYear: String
     let TotalPlanValue: Double

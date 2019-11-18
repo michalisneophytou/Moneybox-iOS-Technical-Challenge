@@ -1,5 +1,5 @@
 //
-//  UIColorExtension.swift
+//  colorStringFunction.swift
 //  Moneybox light (MN)
 //
 //  Created by Michalis Neophytou on 14/11/2019.

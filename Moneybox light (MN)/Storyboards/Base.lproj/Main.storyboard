@@ -53,7 +53,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cr7-HE-i9c">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cr7-HE-i9c">
                                                 <rect key="frame" x="223" y="0.0" width="51" height="50"/>
                                                 <color key="tintColor" red="0.31372549020000001" green="0.74117647060000003" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="onTintColor" red="0.31372549020000001" green="0.74117647060000003" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
