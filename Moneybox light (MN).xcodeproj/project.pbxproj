@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0203177E2382BE39000E9A6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0203177D2382BE38000E9A6C /* SceneDelegate.swift */; };
+		02097B71237842FD00C4C3D6 /* PostLoginStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02097B70237842FD00C4C3D6 /* PostLoginStructs.swift */; };
+		028CCC50238012AC007E7FBA /* OneOffPaymentStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028CCC4F238012AC007E7FBA /* OneOffPaymentStructs.swift */; };
+		028CCC53238019A3007E7FBA /* detailToOverviewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028CCC52238019A3007E7FBA /* detailToOverviewProtocol.swift */; };
+		02B52991237DBEEB0058974B /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B52990237DBEEB0058974B /* AccountCell.swift */; };
+		02B52993237DC37A0058974B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B52992237DC37A0058974B /* UIColorExtension.swift */; };
+		02CADA77237B1759002D7C35 /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CADA76237B1759002D7C35 /* URLSessionExtension.swift */; };
+		02CADA80237B28FC002D7C35 /* GetInvestorProductsStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CADA7F237B28FC002D7C35 /* GetInvestorProductsStructs.swift */; };
+		02CADA82237B37F2002D7C35 /* NetworkFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CADA81237B37F2002D7C35 /* NetworkFunctions.swift */; };
+		02FDBBE323758C54007B6D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDBBE223758C54007B6D11 /* AppDelegate.swift */; };
+		02FDBBEA23758C54007B6D11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02FDBBE823758C54007B6D11 /* Main.storyboard */; };
+		02FDBBED23758C54007B6D11 /* Moneybox_light__MN_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02FDBBEB23758C54007B6D11 /* Moneybox_light__MN_.xcdatamodeld */; };
+		02FDBBEF23758C56007B6D11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02FDBBEE23758C56007B6D11 /* Assets.xcassets */; };
+		02FDBBF223758C56007B6D11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02FDBBF023758C56007B6D11 /* LaunchScreen.storyboard */; };
+		02FDBBFD23758C56007B6D11 /* Moneybox_light__MN_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDBBFC23758C56007B6D11 /* Moneybox_light__MN_Tests.swift */; };
+		02FDBC0823758E43007B6D11 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDBC0723758E43007B6D11 /* LogInViewController.swift */; };
+		02FDBC0A23758E9A007B6D11 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDBC0923758E9A007B6D11 /* AccountViewController.swift */; };
+		02FDBC0C23758EAF007B6D11 /* AccountDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDBC0B23758EAF007B6D11 /* AccountDetailController.swift */; };
+		811770C986A647B0C3DAC518 /* Pods_Moneybox_light__MN_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CD519F228B1BF683596C7F /* Pods_Moneybox_light__MN_.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02FDBBF923758C56007B6D11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02FDBBD723758C54007B6D11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02FDBBDE23758C54007B6D11;
+			remoteInfo = "Moneybox light (MN)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0203177D2382BE38000E9A6C /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		02097B70237842FD00C4C3D6 /* PostLoginStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoginStructs.swift; sourceTree = "<group>"; };
+		028CCC4F238012AC007E7FBA /* OneOffPaymentStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneOffPaymentStructs.swift; sourceTree = "<group>"; };
+		028CCC52238019A3007E7FBA /* detailToOverviewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailToOverviewProtocol.swift; sourceTree = "<group>"; };
+		02B52990237DBEEB0058974B /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		02B52992237DC37A0058974B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		02CADA76237B1759002D7C35 /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
+		02CADA7F237B28FC002D7C35 /* GetInvestorProductsStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInvestorProductsStructs.swift; sourceTree = "<group>"; };
+		02CADA81237B37F2002D7C35 /* NetworkFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFunctions.swift; sourceTree = "<group>"; };
+		02FDBBDF23758C54007B6D11 /* Moneybox light (MN).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moneybox light (MN).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02FDBBE223758C54007B6D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		02FDBBE923758C54007B6D11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		02FDBBEC23758C54007B6D11 /* Moneybox_light__MN_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Moneybox_light__MN_.xcdatamodel; sourceTree = "<group>"; };
+		02FDBBEE23758C56007B6D11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02FDBBF123758C56007B6D11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		02FDBBF323758C56007B6D11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02FDBBF823758C56007B6D11 /* Moneybox light (MN)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Moneybox light (MN)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02FDBBFC23758C56007B6D11 /* Moneybox_light__MN_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moneybox_light__MN_Tests.swift; sourceTree = "<group>"; };
+		02FDBBFE23758C56007B6D11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02FDBC0723758E43007B6D11 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		02FDBC0923758E9A007B6D11 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		02FDBC0B23758EAF007B6D11 /* AccountDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailController.swift; sourceTree = "<group>"; };
+		0EE8C85ED946668A180D28A0 /* Pods-Moneybox light (MN).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneybox light (MN).debug.xcconfig"; path = "Target Support Files/Pods-Moneybox light (MN)/Pods-Moneybox light (MN).debug.xcconfig"; sourceTree = "<group>"; };
+		22CD519F228B1BF683596C7F /* Pods_Moneybox_light__MN_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moneybox_light__MN_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8C175F7D36EB72AAEE7330 /* Pods-Moneybox light (MN).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneybox light (MN).release.xcconfig"; path = "Target Support Files/Pods-Moneybox light (MN)/Pods-Moneybox light (MN).release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02FDBBDC23758C54007B6D11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				811770C986A647B0C3DAC518 /* Pods_Moneybox_light__MN_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02FDBBF523758C56007B6D11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		028CCC5123801983007E7FBA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				028CCC52238019A3007E7FBA /* detailToOverviewProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		02CADA78237B1780002D7C35 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				02097B70237842FD00C4C3D6 /* PostLoginStructs.swift */,
+				028CCC4F238012AC007E7FBA /* OneOffPaymentStructs.swift */,
+				02CADA7F237B28FC002D7C35 /* GetInvestorProductsStructs.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		02CADA79237B1796002D7C35 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				02CADA76237B1759002D7C35 /* URLSessionExtension.swift */,
+				02B52992237DC37A0058974B /* UIColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		02CADA7A237B17B5002D7C35 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				02FDBC0723758E43007B6D11 /* LogInViewController.swift */,
+				02FDBC0923758E9A007B6D11 /* AccountViewController.swift */,
+				02FDBC0B23758EAF007B6D11 /* AccountDetailController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		02CADA7D237B1B58002D7C35 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				02FDBBE823758C54007B6D11 /* Main.storyboard */,
+				02FDBBF023758C56007B6D11 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		02CADA83237B3806002D7C35 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				02CADA81237B37F2002D7C35 /* NetworkFunctions.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		02FDBBD623758C54007B6D11 = {
+			isa = PBXGroup;
+			children = (
+				02FDBBE123758C54007B6D11 /* Moneybox light (MN) */,
+				02FDBBFB23758C56007B6D11 /* Moneybox light (MN)Tests */,
+				02FDBBE023758C54007B6D11 /* Products */,
+				A49759E93642909F36BEC893 /* Pods */,
+				5B5498415894BEE5012870C5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		02FDBBE023758C54007B6D11 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02FDBBDF23758C54007B6D11 /* Moneybox light (MN).app */,
+				02FDBBF823758C56007B6D11 /* Moneybox light (MN)Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02FDBBE123758C54007B6D11 /* Moneybox light (MN) */ = {
+			isa = PBXGroup;
+			children = (
+				02FDBBE223758C54007B6D11 /* AppDelegate.swift */,
+				0203177D2382BE38000E9A6C /* SceneDelegate.swift */,
+				02B52990237DBEEB0058974B /* AccountCell.swift */,
+				02CADA83237B3806002D7C35 /* Functions */,
+				028CCC5123801983007E7FBA /* Protocols */,
+				02CADA7A237B17B5002D7C35 /* ViewControllers */,
+				02CADA79237B1796002D7C35 /* Extensions */,
+				02CADA78237B1780002D7C35 /* Structs */,
+				02CADA7D237B1B58002D7C35 /* Storyboards */,
+				02FDBBEE23758C56007B6D11 /* Assets.xcassets */,
+				02FDBBF323758C56007B6D11 /* Info.plist */,
+				02FDBBEB23758C54007B6D11 /* Moneybox_light__MN_.xcdatamodeld */,
+			);
+			path = "Moneybox light (MN)";
+			sourceTree = "<group>";
+		};
+		02FDBBFB23758C56007B6D11 /* Moneybox light (MN)Tests */ = {
+			isa = PBXGroup;
+			children = (
+				02FDBBFC23758C56007B6D11 /* Moneybox_light__MN_Tests.swift */,
+				02FDBBFE23758C56007B6D11 /* Info.plist */,
+			);
+			path = "Moneybox light (MN)Tests";
+			sourceTree = "<group>";
+		};
+		5B5498415894BEE5012870C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22CD519F228B1BF683596C7F /* Pods_Moneybox_light__MN_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A49759E93642909F36BEC893 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EE8C85ED946668A180D28A0 /* Pods-Moneybox light (MN).debug.xcconfig */,
+				3A8C175F7D36EB72AAEE7330 /* Pods-Moneybox light (MN).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02FDBBDE23758C54007B6D11 /* Moneybox light (MN) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02FDBC0123758C56007B6D11 /* Build configuration list for PBXNativeTarget "Moneybox light (MN)" */;
+			buildPhases = (
+				6A6C779F6AA86352BCCAB0CF /* [CP] Check Pods Manifest.lock */,
+				02FDBBDB23758C54007B6D11 /* Sources */,
+				02FDBBDC23758C54007B6D11 /* Frameworks */,
+				02FDBBDD23758C54007B6D11 /* Resources */,
+				43BCA3E7A94D8205956F48EE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Moneybox light (MN)";
+			productName = "Moneybox light (MN)";
+			productReference = 02FDBBDF23758C54007B6D11 /* Moneybox light (MN).app */;
+			productType = "com.apple.product-type.application";
+		};
+		02FDBBF723758C56007B6D11 /* Moneybox light (MN)Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02FDBC0423758C56007B6D11 /* Build configuration list for PBXNativeTarget "Moneybox light (MN)Tests" */;
+			buildPhases = (
+				02FDBBF423758C56007B6D11 /* Sources */,
+				02FDBBF523758C56007B6D11 /* Frameworks */,
+				02FDBBF623758C56007B6D11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02FDBBFA23758C56007B6D11 /* PBXTargetDependency */,
+			);
+			name = "Moneybox light (MN)Tests";
+			productName = "Moneybox light (MN)Tests";
+			productReference = 02FDBBF823758C56007B6D11 /* Moneybox light (MN)Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02FDBBD723758C54007B6D11 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				KnownAssetTags = (
+					1,
+					2,
+					3,
+				);
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Michalis Neophytou";
+				TargetAttributes = {
+					02FDBBDE23758C54007B6D11 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					02FDBBF723758C56007B6D11 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = 02FDBBDE23758C54007B6D11;
+					};
+				};
+			};
+			buildConfigurationList = 02FDBBDA23758C54007B6D11 /* Build configuration list for PBXProject "Moneybox light (MN)" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 02FDBBD623758C54007B6D11;
+			productRefGroup = 02FDBBE023758C54007B6D11 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02FDBBDE23758C54007B6D11 /* Moneybox light (MN) */,
+				02FDBBF723758C56007B6D11 /* Moneybox light (MN)Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02FDBBDD23758C54007B6D11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02FDBBF223758C56007B6D11 /* LaunchScreen.storyboard in Resources */,
+				02FDBBEF23758C56007B6D11 /* Assets.xcassets in Resources */,
+				02FDBBEA23758C54007B6D11 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02FDBBF623758C56007B6D11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43BCA3E7A94D8205956F48EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moneybox light (MN)/Pods-Moneybox light (MN)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Moneybox light (MN)/Pods-Moneybox light (MN)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Moneybox light (MN)/Pods-Moneybox light (MN)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A6C779F6AA86352BCCAB0CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moneybox light (MN)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02FDBBDB23758C54007B6D11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02FDBBED23758C54007B6D11 /* Moneybox_light__MN_.xcdatamodeld in Sources */,
+				0203177E2382BE39000E9A6C /* SceneDelegate.swift in Sources */,
+				02097B71237842FD00C4C3D6 /* PostLoginStructs.swift in Sources */,
+				028CCC53238019A3007E7FBA /* detailToOverviewProtocol.swift in Sources */,
+				02FDBC0C23758EAF007B6D11 /* AccountDetailController.swift in Sources */,
+				02CADA80237B28FC002D7C35 /* GetInvestorProductsStructs.swift in Sources */,
+				02FDBC0A23758E9A007B6D11 /* AccountViewController.swift in Sources */,
+				02FDBBE323758C54007B6D11 /* AppDelegate.swift in Sources */,
+				028CCC50238012AC007E7FBA /* OneOffPaymentStructs.swift in Sources */,
+				02FDBC0823758E43007B6D11 /* LogInViewController.swift in Sources */,
+				02CADA82237B37F2002D7C35 /* NetworkFunctions.swift in Sources */,
+				02B52991237DBEEB0058974B /* AccountCell.swift in Sources */,
+				02CADA77237B1759002D7C35 /* URLSessionExtension.swift in Sources */,
+				02B52993237DC37A0058974B /* UIColorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02FDBBF423758C56007B6D11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02FDBBFD23758C56007B6D11 /* Moneybox_light__MN_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		02FDBBFA23758C56007B6D11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02FDBBDE23758C54007B6D11 /* Moneybox light (MN) */;
+			targetProxy = 02FDBBF923758C56007B6D11 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		02FDBBE823758C54007B6D11 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02FDBBE923758C54007B6D11 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		02FDBBF023758C56007B6D11 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02FDBBF123758C56007B6D11 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		02FDBBFF23758C56007B6D11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		02FDBC0023758C56007B6D11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02FDBC0223758C56007B6D11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EE8C85ED946668A180D28A0 /* Pods-Moneybox light (MN).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U6SSU9PLP6;
+				INFOPLIST_FILE = "Moneybox light (MN)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Moneybox-light--MN-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		02FDBC0323758C56007B6D11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A8C175F7D36EB72AAEE7330 /* Pods-Moneybox light (MN).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U6SSU9PLP6;
+				INFOPLIST_FILE = "Moneybox light (MN)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Moneybox-light--MN-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		02FDBC0523758C56007B6D11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U6SSU9PLP6;
+				INFOPLIST_FILE = "Moneybox light (MN)Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Moneybox-light--MN-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moneybox light (MN).app/Moneybox light (MN)";
+			};
+			name = Debug;
+		};
+		02FDBC0623758C56007B6D11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U6SSU9PLP6;
+				INFOPLIST_FILE = "Moneybox light (MN)Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Moneybox-light--MN-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moneybox light (MN).app/Moneybox light (MN)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02FDBBDA23758C54007B6D11 /* Build configuration list for PBXProject "Moneybox light (MN)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02FDBBFF23758C56007B6D11 /* Debug */,
+				02FDBC0023758C56007B6D11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02FDBC0123758C56007B6D11 /* Build configuration list for PBXNativeTarget "Moneybox light (MN)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02FDBC0223758C56007B6D11 /* Debug */,
+				02FDBC0323758C56007B6D11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02FDBC0423758C56007B6D11 /* Build configuration list for PBXNativeTarget "Moneybox light (MN)Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02FDBC0523758C56007B6D11 /* Debug */,
+				02FDBC0623758C56007B6D11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		02FDBBEB23758C54007B6D11 /* Moneybox_light__MN_.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				02FDBBEC23758C54007B6D11 /* Moneybox_light__MN_.xcdatamodel */,
+			);
+			currentVersion = 02FDBBEC23758C54007B6D11 /* Moneybox_light__MN_.xcdatamodel */;
+			path = Moneybox_light__MN_.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 02FDBBD723758C54007B6D11 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_Moneybox_light__MN_ {
+  umbrella header "Pods-Moneybox light (MN)-umbrella.h"
+
+  export *
+  module * { export * }
+}
